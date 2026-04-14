@@ -163,7 +163,8 @@ ALTER SEQUENCE public.planet_planet_id_seq OWNED BY public.planet.planet_id;
 CREATE TABLE public.planet_types (
     planet_types_id integer NOT NULL,
     name character varying NOT NULL,
-    description text NOT NULL
+    description text NOT NULL,
+    rating integer
 );
 
 
@@ -324,12 +325,12 @@ INSERT INTO public.planet VALUES (12, 'Yavin', 'Green', 2376.00, false, 6, 2);
 -- Data for Name: planet_types; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.planet_types VALUES (1, 'Eyeball', 'tidal locking induces a spatially dependent temperature gradient');
-INSERT INTO public.planet_types VALUES (2, 'Gas giant', 'massive, composed primarily of hydrogen and helium');
-INSERT INTO public.planet_types VALUES (3, 'Ice', 'solid, icy surface');
-INSERT INTO public.planet_types VALUES (4, 'Steam', 'atmosphere made of steam H2O');
-INSERT INTO public.planet_types VALUES (5, 'Iron', 'consists primarily of an iron-rich core with little or no mantle');
-INSERT INTO public.planet_types VALUES (6, 'Chthonian', 'orbits close to its parent star');
+INSERT INTO public.planet_types VALUES (1, 'Eyeball', 'tidal locking induces a spatially dependent temperature gradient', NULL);
+INSERT INTO public.planet_types VALUES (2, 'Gas giant', 'massive, composed primarily of hydrogen and helium', NULL);
+INSERT INTO public.planet_types VALUES (3, 'Ice', 'solid, icy surface', NULL);
+INSERT INTO public.planet_types VALUES (4, 'Steam', 'atmosphere made of steam H2O', NULL);
+INSERT INTO public.planet_types VALUES (5, 'Iron', 'consists primarily of an iron-rich core with little or no mantle', NULL);
+INSERT INTO public.planet_types VALUES (6, 'Chthonian', 'orbits close to its parent star', NULL);
 
 
 --
